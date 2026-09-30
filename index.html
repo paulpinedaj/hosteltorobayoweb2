@@ -1,2071 +1,3284 @@
 <!DOCTYPE html>
-
 <html lang="es">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
-<meta name="description" content="" />
-<meta name="keywords" content="http://www.hosteltorobayo.cl, www.hosteltorobayo.cl, hosteltorobayo.cl, hosteltorobayo" />
-<meta name="author" content="Hecho por Skeleton.cl - Paul Pineda - Chile"/>
-<link rel="stylesheet" href="./static/font/stylesheet.css">
-<link rel="stylesheet" href="./static/css/bootstrap.css">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <title>Hostel Torobayo | Valdivia, Chile</title>
+
+    <meta
+        name="description"
+        content="Hostel Torobayo en Valdivia, Chile. Un lugar acogedor entre los frondosos árboles del bosque valdiviano, cerca de los principales atractivos turísticos de la región."
+    >
+
+    <meta
+        name="keywords"
+        content="Hostel Torobayo, Hostel Valdivia, alojamiento Valdivia, hospedaje Valdivia, turismo Valdivia, Chile, Torobayo"
+    >
+
+    <meta
+        name="author"
+        content="Hecho por Skeleton.cl - Paul Pineda - Chile"
+    >
+
+    <meta name="theme-color" content="#17251d">
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Hostel Torobayo | Valdivia, Chile"
+    >
+
+    <meta
+        property="og:description"
+        content="Descansa entre el bosque valdiviano. Hostel Torobayo, Valdivia."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://www.hosteltorobayo.cl/"
+    >
+
+    <meta
+        property="og:image"
+        content="./static/img/foto/new/portada.jpg"
+    >
+
+    <!-- Fuentes -->
+
+    <link
+        rel="stylesheet"
+        href="./static/font/stylesheet.css"
+    >
+
+    <!-- Bootstrap existente -->
+
+    <link
+        rel="stylesheet"
+        href="./static/css/bootstrap.css"
+    >
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f3ee;
+            color: #1d2821;
+            font-family: "DM Sans", Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+
+        /* =========================================================
+           VARIABLES
+        ========================================================= */
+
+        :root {
+
+            --forest: #17251d;
+            --forest-2: #22372a;
+            --forest-3: #2f4b39;
+
+            --sage: #708878;
+            --sage-light: #dce4dc;
+
+            --cream: #f5f3ee;
+            --cream-2: #ebe8df;
+            --white: #ffffff;
+
+            --text: #1d2821;
+            --muted: #667068;
+
+            --border: rgba(29, 40, 33, 0.12);
+
+            --gold: #b8945b;
+
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 30px;
+
+            --shadow:
+                0 20px 60px rgba(18, 31, 23, 0.10);
+
+            --max-width: 1240px;
+        }
+
+
+        /* =========================================================
+           UTILIDADES
+        ========================================================= */
+
+        .container-modern {
+            width: min(
+                calc(100% - 40px),
+                var(--max-width)
+            );
+
+            margin-inline: auto;
+        }
+
+        .section {
+            padding: clamp(70px, 9vw, 130px) 0;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            color: var(--sage);
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 32px;
+            height: 1px;
+            background: var(--sage);
+        }
+
+        .section-title {
+            color: var(--forest);
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: clamp(
+                38px,
+                5vw,
+                64px
+            );
+
+            font-weight: 600;
+            line-height: 1.05;
+
+            letter-spacing: -1.5px;
+        }
+
+        .section-text {
+            margin-top: 20px;
+
+            color: var(--muted);
+
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .site-header {
+            position: fixed;
+            z-index: 1000;
+
+            top: 0;
+            left: 0;
+            right: 0;
+
+            padding: 18px 0;
+
+            transition:
+                background .3s ease,
+                box-shadow .3s ease,
+                padding .3s ease;
+        }
+
+        .site-header.scrolled {
+            background: rgba(245, 243, 238, .94);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, .08);
+
+            padding: 12px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            min-height: 64px;
+
+            padding: 10px 16px 10px 20px;
+
+            border: 1px solid rgba(255,255,255,.28);
+
+            background: rgba(255,255,255,.12);
+
+            border-radius: 999px;
+
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .site-header.scrolled .header-inner {
+            background: rgba(255,255,255,.72);
+            border-color: rgba(29,40,33,.08);
+        }
+
+
+        /* LOGO */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 120px;
+            height: auto;
+        }
+
+        .brand-location {
+            padding-left: 12px;
+
+            border-left: 1px solid rgba(255,255,255,.45);
+
+            color: #fff;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 2px;
+        }
+
+        .site-header.scrolled .brand-location {
+            color: var(--forest);
+            border-color: var(--border);
+        }
+
+
+        /* NAV */
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .main-nav a {
+            color: #fff;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+
+            transition: opacity .2s ease;
+        }
+
+        .main-nav a:hover {
+            opacity: .65;
+        }
+
+        .site-header.scrolled .main-nav a {
+            color: var(--forest);
+        }
+
+
+        .nav-book {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 20px;
+
+            background: var(--forest);
+            color: #fff !important;
+
+            border-radius: 999px;
+
+            opacity: 1 !important;
+        }
+
+
+        /* MOBILE MENU */
+
+        .menu-toggle {
+            display: none;
+
+            width: 44px;
+            height: 44px;
+
+            border: 0;
+            border-radius: 50%;
+
+            background: var(--forest);
+            color: #fff;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            position: relative;
+
+            min-height: 92vh;
+            min-height: 92svh;
+
+            display: flex;
+            align-items: flex-end;
+
+            overflow: hidden;
+
+            background: var(--forest);
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(0,0,0,.20) 0%,
+                    rgba(0,0,0,.08) 35%,
+                    rgba(9,22,15,.78) 100%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            width: 100%;
+
+            padding-bottom: clamp(
+                70px,
+                10vw,
+                130px
+            );
+        }
+
+        .hero-kicker {
+            color: rgba(255,255,255,.82);
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            max-width: 850px;
+
+            color: #fff;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: clamp(
+                52px,
+                9vw,
+                110px
+            );
+
+            line-height: .92;
+
+            font-weight: 600;
+
+            letter-spacing: -4px;
+        }
+
+        .hero-title span {
+            color: #dfe8df;
+            font-style: italic;
+        }
+
+        .hero-description {
+            max-width: 570px;
+
+            margin-top: 25px;
+
+            color: rgba(255,255,255,.86);
+
+            font-size: clamp(
+                16px,
+                2vw,
+                19px
+            );
+
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            margin-top: 32px;
+        }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .btn-modern {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            min-height: 52px;
+
+            padding: 0 24px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+
+            transition:
+                transform .2s ease,
+                background .2s ease;
+        }
+
+        .btn-modern:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: var(--forest);
+        }
+
+        .btn-secondary {
+            color: #fff;
+
+            border: 1px solid rgba(255,255,255,.45);
+
+            background: rgba(255,255,255,.10);
+
+            backdrop-filter: blur(10px);
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .intro {
+            background: var(--cream);
+        }
+
+        .intro-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.1fr)
+                minmax(0, .9fr);
+
+            gap: clamp(40px, 8vw, 110px);
+
+            align-items: center;
+        }
+
+        .intro-image {
+            position: relative;
+        }
+
+        .intro-image img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+
+            border-radius: var(--radius-lg);
+
+            box-shadow: var(--shadow);
+        }
+
+        .intro-badge {
+            position: absolute;
+
+            right: -25px;
+            bottom: 35px;
+
+            width: 130px;
+            height: 130px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--forest);
+            color: #fff;
+
+            border-radius: 50%;
+
+            text-align: center;
+
+            box-shadow: var(--shadow);
+        }
+
+        .intro-badge strong {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+        }
+
+        .intro-badge span {
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .intro-copy p {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.9;
+
+            margin-top: 20px;
+        }
+
+        .intro-copy strong {
+            color: var(--forest);
+        }
+
+
+        /* =========================================================
+           FEATURE STRIP
+        ========================================================= */
+
+        .feature-strip {
+            background: var(--forest);
+            color: #fff;
+
+            padding: 30px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 1px;
+
+            background: rgba(255,255,255,.14);
+        }
+
+        .feature-item {
+            min-height: 115px;
+
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            padding: 20px 25px;
+
+            background: var(--forest);
+        }
+
+        .feature-item i {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,.22);
+            border-radius: 50%;
+
+            color: #dbe6dc;
+        }
+
+        .feature-item strong {
+            display: block;
+
+            font-size: 13px;
+
+            letter-spacing: .4px;
+        }
+
+        .feature-item span {
+            display: block;
+
+            margin-top: 3px;
+
+            color: rgba(255,255,255,.62);
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           DESTINO
+        ========================================================= */
+
+        .destination {
+            background: #e9e8df;
+        }
+
+        .destination-grid {
+            display: grid;
+
+            grid-template-columns:
+                .8fr
+                1.2fr;
+
+            gap: 30px;
+
+            align-items: stretch;
+        }
+
+        .destination-copy {
+            padding: clamp(30px, 5vw, 70px);
+
+            background: var(--forest);
+
+            color: #fff;
+
+            border-radius: var(--radius-lg);
+        }
+
+        .destination-copy .eyebrow {
+            color: #b8c8bb;
+        }
+
+        .destination-copy .eyebrow::before {
+            background: #b8c8bb;
+        }
+
+        .destination-copy .section-title {
+            color: #fff;
+        }
+
+        .destination-copy p {
+            margin-top: 24px;
+
+            color: rgba(255,255,255,.72);
+
+            line-height: 1.8;
+        }
+
+        .destination-image {
+            min-height: 520px;
+
+            border-radius: var(--radius-lg);
+
+            overflow: hidden;
+        }
+
+        .destination-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================================================
+           INFORMATION
+        ========================================================= */
+
+        .information {
+            background: var(--cream);
+        }
+
+        .info-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .info-card {
+            padding: 30px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .info-icon {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 24px;
+
+            background: var(--sage-light);
+
+            border-radius: 15px;
+        }
+
+        .info-icon img {
+            width: 27px;
+            height: 27px;
+        }
+
+        .info-card h3 {
+            color: var(--forest);
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 23px;
+
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           SERVICIOS
+        ========================================================= */
+
+        .services {
+            background: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 16px;
+        }
+
+        .service-card {
+            min-height: 180px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 25px;
+
+            background: var(--cream);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+
+            transition:
+                transform .25s ease,
+                background .25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: var(--sage-light);
+        }
+
+        .service-card.wide {
+            grid-column: span 2;
+        }
+
+        .service-card img {
+            width: 38px;
+            height: 38px;
+
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: var(--forest);
+
+            font-size: 15px;
+
+            line-height: 1.35;
+        }
+
+        .service-card span {
+            margin-top: 5px;
+
+            color: var(--muted);
+
+            font-size: 11px;
+        }
+
+
+        /* =========================================================
+           GALERÍA
+        ========================================================= */
+
+        .gallery {
+            background: var(--forest);
+            color: #fff;
+        }
+
+        .gallery .section-title {
+            color: #fff;
+        }
+
+        .gallery .eyebrow {
+            color: #b7c8ba;
+        }
+
+        .gallery .eyebrow::before {
+            background: #b7c8ba;
+        }
+
+        .gallery-intro {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            gap: 30px;
+
+            margin-bottom: 45px;
+        }
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            grid-auto-rows: 250px;
+
+            gap: 12px;
+        }
+
+        .gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .5s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-label {
+            position: absolute;
+
+            left: 15px;
+            bottom: 15px;
+
+            padding: 8px 12px;
+
+            background: rgba(0,0,0,.52);
+
+            backdrop-filter: blur(10px);
+
+            border-radius: 999px;
+
+            color: #fff;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           ALREDEDORES
+        ========================================================= */
+
+        .nearby {
+            background: var(--cream-2);
+        }
+
+        .nearby-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .nearby-card {
+            background: #fff;
+
+            border-radius: var(--radius-md);
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+        }
+
+        .nearby-card img {
+            width: 100%;
+            aspect-ratio: 1.15;
+
+            object-fit: cover;
+        }
+
+        .nearby-content {
+            padding: 20px;
+        }
+
+        .nearby-content h3 {
+            color: var(--forest);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 21px;
+        }
+
+        .distance {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            margin-top: 8px;
+
+            color: var(--sage);
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           CONTACTO
+        ========================================================= */
+
+        .contact {
+            background: #fff;
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                .85fr
+                1.15fr;
+
+            gap: 25px;
+        }
+
+        .contact-card {
+            padding: clamp(30px, 5vw, 65px);
+
+            background: var(--forest);
+
+            border-radius: var(--radius-lg);
+
+            color: #fff;
+        }
+
+        .contact-card .section-title {
+            color: #fff;
+        }
+
+        .contact-card .section-text {
+            color: rgba(255,255,255,.68);
+        }
+
+        .contact-links {
+            display: grid;
+            gap: 12px;
+
+            margin-top: 35px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.12);
+
+            color: rgba(255,255,255,.85);
+
+            font-size: 14px;
+        }
+
+        .contact-link i {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255,255,255,.09);
+
+            border-radius: 50%;
+        }
+
+        .contact-link:hover {
+            color: #fff;
+        }
+
+
+        /* MAP */
+
+        .map-wrapper {
+            min-height: 560px;
+
+            overflow: hidden;
+
+            border-radius: var(--radius-lg);
+
+            box-shadow: var(--shadow);
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            min-height: 560px;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            position: relative;
+
+            padding: 100px 0;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #263c2d,
+                    #14231a
+                );
+
+            color: #fff;
+
+            text-align: center;
+        }
+
+        .cta::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,.08);
+
+            top: -250px;
+            left: -100px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+
+            max-width: 760px;
+
+            margin: auto;
+        }
+
+        .cta h2 {
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: clamp(
+                40px,
+                6vw,
+                72px
+            );
+
+            line-height: 1.05;
+
+            font-weight: 600;
+        }
+
+        .cta p {
+            max-width: 600px;
+
+            margin: 20px auto 30px;
+
+            color: rgba(255,255,255,.7);
+
+            font-size: 17px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #101913;
+            color: #fff;
+        }
+
+        .footer-main {
+            padding: 70px 0;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr auto;
+
+            gap: 40px;
+
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 150px;
+
+            filter: brightness(0) invert(1);
+
+            opacity: .92;
+        }
+
+        .footer-location {
+            margin-top: 18px;
+
+            color: rgba(255,255,255,.55);
+
+            font-size: 13px;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 22px;
+        }
+
+        .footer-nav a {
+            color: rgba(255,255,255,.68);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
+
+        .footer-nav a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            padding: 20px 0;
+
+            border-top: 1px solid rgba(255,255,255,.08);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .skeleton-credit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            color: rgba(255,255,255,.38);
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+        .skeleton-credit img {
+            width: 32px;
+
+            opacity: .7;
+        }
+
+
+        /* =========================================================
+           WHATSAPP
+        ========================================================= */
+
+        .whatsapp {
+            position: fixed;
+
+            z-index: 900;
+
+            right: 22px;
+            bottom: 22px;
+
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #25d366;
+            color: #fff;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 12px 35px rgba(0,0,0,.22);
+
+            font-size: 27px;
+
+            transition:
+                transform .2s ease;
+        }
+
+        .whatsapp:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE TABLET
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .main-nav {
+                gap: 15px;
+            }
+
+            .main-nav a {
+                font-size: 10px;
+            }
+
+            .feature-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .info-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .nearby-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVE MOBILE
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .container-modern {
+                width: min(
+                    calc(100% - 28px),
+                    1240px
+                );
+            }
+
+
+            /* HEADER */
+
+            .site-header {
+                padding: 10px 0;
+            }
+
+            .header-inner {
+                min-height: 58px;
+
+                padding: 8px 10px 8px 15px;
+            }
+
+            .brand img {
+                width: 102px;
+            }
+
+            .brand-location {
+                display: none;
+            }
+
+            .main-nav {
+                display: none;
+
+                position: absolute;
+
+                top: calc(100% + 10px);
+
+                left: 14px;
+                right: 14px;
+
+                padding: 20px;
+
+                flex-direction: column;
+                align-items: stretch;
+
+                gap: 4px;
+
+                background: rgba(245,243,238,.98);
+
+                border-radius: 22px;
+
+                box-shadow: var(--shadow);
+            }
+
+            .main-nav.open {
+                display: flex;
+            }
+
+            .main-nav a {
+                padding: 13px 10px;
+
+                color: var(--forest) !important;
+
+                border-bottom: 1px solid var(--border);
+
+                font-size: 11px;
+            }
+
+            .main-nav a:last-child {
+                border-bottom: 0;
+            }
+
+            .nav-book {
+                text-align: center;
+
+                margin-top: 7px;
+            }
+
+            .menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+            /* HERO */
+
+            .hero {
+                min-height: 90svh;
+            }
+
+            .hero-content {
+                padding-bottom: 55px;
+            }
+
+            .hero-title {
+                font-size: clamp(
+                    48px,
+                    15vw,
+                    76px
+                );
+
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-modern {
+                width: 100%;
+            }
+
+
+            /* INTRO */
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 55px;
+            }
+
+            .intro-badge {
+                width: 105px;
+                height: 105px;
+
+                right: 15px;
+                bottom: 20px;
+            }
+
+            .intro-badge strong {
+                font-size: 23px;
+            }
+
+
+            /* FEATURES */
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature-item {
+                min-height: 105px;
+
+                padding: 17px;
+
+                gap: 12px;
+            }
+
+            .feature-item i {
+                width: 36px;
+                height: 36px;
+
+                flex: 0 0 36px;
+            }
+
+
+            /* DESTINATION */
+
+            .destination-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .destination-image {
+                min-height: 350px;
+                order: -1;
+            }
+
+
+            /* INFO */
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            /* SERVICES */
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .service-card {
+                min-height: 155px;
+            }
+
+            .service-card.wide {
+                grid-column: span 2;
+            }
+
+
+            /* GALLERY */
+
+            .gallery-intro {
+                display: block;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+
+                grid-auto-rows: 170px;
+
+                gap: 8px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+
+            /* NEARBY */
+
+            .nearby-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            /* CONTACT */
+
+            .map-wrapper,
+            #map {
+                min-height: 390px;
+            }
+
+
+            /* FOOTER */
+
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-nav {
+                gap: 14px;
+            }
+
+            .footer-bottom {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+        }
+
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+        @media (max-width: 430px) {
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nearby-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+
+                grid-auto-rows: 230px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .gallery-item.tall {
+                grid-row: span 1;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card.wide {
+                grid-column: span 1;
+            }
+
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+
+        }
+
+    </style>
+
 </head>
 
+
 <body>
-<title>Hostel Torobayo | CL</title>
-<style>
-*{
-margin: 0;
-padding: 0;
-}
-hr{
-color:#b6b6b6;
-}
-
-</style>
-
-
-
-
-<style>
-.menu-nav{
-margin: 0 auto;
-border-bottom: 1px solid #dedede;
-overflow-x:hidden;
-}
-
-.box-img-hoteltorobayo{
-display: inline-block;
-}
-
-.img-hoteltorobayo{
-opacity: 1;
-}
-
-.img-hoteltorobayo:hover{
-opacity: 0.7;
-}
-
-.box-txt-valdivia{
-display: inline-block;
-float: right;
-}
-
-.txt-valdivia{
-letter-spacing: 3px;
-font-family: 'Jungle';
-src: url('Jungle.woff2') format('woff2'),
-url('Jungle.woff') format('woff');
-font-weight: normal;
-opacity: 1;
-}
-
-.txt-valdivia:hover{
-opacity: 0.7;
-}
-
-.menu-nav-2{
-width: 380px;
-margin: 0 auto;
-text-align: right;
-}
-
-.box-link-menu{
-float: right;
-position: absolute;
-}
-.link-menu{
-color: #000000;
-text-decoration: none;
-font-size: 14px;
-font-family: 'Josefin Sans';
-src: url('JosefinSans-SemiBold.woff2') format('woff2'),
-url('JosefinSans-SemiBold.woff') format('woff');
-font-weight: 600;
-font-style: normal;
-letter-spacing: 1.8px;
-
-}
-.link-menu:hover{
-color: #8a8a8a;
-
-}
-.lnl-menu{
-display: inline-block;
-font-size: 13px;
-font-family: 'Josefin Sans';
-src: url('JosefinSans-SemiBold.woff2') format('woff2'),
-url('JosefinSans-SemiBold.woff') format('woff');
-padding: 0 2px;
-}
-
-
-.menu-nav{
-width: 296px;
-height: 82px;
-}
-.box-img-hoteltorobayo{
-line-height: 75px;
-}
-.img-hoteltorobayo{
-width: 126px;
-}
-.box-txt-valdivia{
-line-height: 75px;
-}
-
-.txt-valdivia{
-font-size: 13px;
-line-height: 81px;
-}
-.menu-nav-2{
-width: 296px;
-height: 42px;
-line-height: 39px;
-}
-
-.box-link-menu{
-width: 296px;
-}
-
-.link-menu{
-color: #000000;
-font-size: 12px;
-}
-
-.lnl-menu{
-font-size: 12px;
-padding: 0 2px;
-}
-
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-@media (min-width:375px) and (max-width: 388px) 
-and (-webkit-min-device-pixel-ratio: 2) {
-.menu-nav{
-width: 342px;
-height: 94px;
-}
-.box-img-hoteltorobayo{
-line-height: 86px;
-}
-.img-hoteltorobayo{
-width: 148px;
-}
-.box-txt-valdivia{
-line-height: 77px;
-}
-
-.txt-valdivia{
-font-size: 15px;
-line-height: 90px;
-}
-.menu-nav-2{
-width: 342px;
-height: 48px;
-line-height: 44px;
-}
-
-.box-link-menu{
-width: 342px;
-}
-
-.link-menu{
-color: #000000;
-font-size: 14px;
-}
-
-.lnl-menu{
-font-size: 12px;
-padding: 0 2px;
-}
-}
-
-@media (min-width: 389px) and (max-width: 413px)  {
-.menu-nav{
-width: 359px;
-height: 94px;
-}
-
-.box-img-hoteltorobayo{
-line-height: 86px;
-}
-.img-hoteltorobayo{
-width: 166px;
-}
-.box-txt-valdivia{
-line-height: 77px;
-}
-
-.txt-valdivia{
-font-size: 17px;
-line-height: 90px;
-}
-
-.menu-nav-2{
-width: 359px;
-height: 52px;
-line-height: 52px;
-}
-
-.box-link-menu{
-width: 359px;
-}
-
-.link-menu{
-color: #000000;
-font-size: 15px;
-}
-
-.lnl-menu{
-font-size: 14px;
-padding: 0 2px;
-}
-}
-
-@media (min-width: 414px) and (max-width: 2000px)  {
-.menu-nav{
-width: 380px;
-height: 108px;
-}
-
-.box-img-hoteltorobayo{
-line-height: 104px;
-}
-.img-hoteltorobayo{
-width: 165px;
-
-}
-.box-txt-valdivia{
-line-height: 104px;
-}
-
-.txt-valdivia{
-font-size: 17px;
-line-height: 108px;
-}
-
-.menu-nav-2{
-width: 380px;
-height: 56px;
-line-height: 53px;
-}
-
-.box-link-menu{
-    width: 380px;
-}
-
-.link-menu{
-font-size: 15px;
-}
-
-.lnl-menu{
-font-size: 14px;
-padding: 0 2px;
-}
-}
-</style>
-
-<div id="inicioid" class="menu-nav">
-    <div class="box-img-hoteltorobayo">
-        <img class="img-hoteltorobayo" src="./static/img/logo/hoteltorobayo-logo.svg">
-    </div>
-    <div class="box-txt-valdivia">
-        <h2 class="txt-valdivia ">VALDIVIA</h2>
-    </div>
-</div>
-<div class="menu-nav-2">
-    <div class="box-link-menu">
-        <a class="link-menu" href="#fotoid">FOTOS</a>
-        <span class="lnl-menu">|</span>
-        <a class="link-menu" href="#contactoid">CONTACTO</a>
-    </div>
-</div>
-
-
-<style>
-.box-sobre-nosotros{
-margin: 0 auto;
-
-}
-
-.box-img-galeria{
-
-padding: 0;
-margin: 0 auto;
-}
-.img-galeria{
-}
-.h-sobre-nosotros{
-color: #000000;
-font-family: 'Neuer Weltschmerz DEMO';
-src: url('NeuerWeltschmerzDEMO.woff2') format('woff2'),
-url('NeuerWeltschmerzDEMO.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-
-}
-
-.txt-sobre-nosotros{
-color: #474747;
-font-family: 'Modeco Trial';
-src: url('ModecoTrial-Regular.woff2') format('woff2'),
-url('ModecoTrial-Regular.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-}
-
-.p-txt-sobre-nosotros{
-color: #000000;
-}
-
-.box-destino{
-margin: 0 auto;
-}
-
-.box-sobre-nosotros-2{
-}
-
-.box-losespacios{
-margin: 0 auto;
-}
-
-.box-hr-1{
-width: 380px;
-margin: 0 auto;
-}
-
-.box-sobre-nosotros{
-width: 296px;
-}
-
-.box-img-galeria{
-width: 296px;
-height: 296px;
-max-width: 296px;
-}
-.img-galeria{
-height: 296px;
-}
-.h-sobre-nosotros{
-font-size: 23px;
-padding-bottom: 10px;
-letter-spacing: 3px;
-margin: 0;
-}
-
-.txt-sobre-nosotros{
-font-size: 15px;
-margin-bottom: 10px;
-}
-
-.box-sobre-nosotros-2{
-margin: 15px 0;
-}
-
-.box-destino{
-width: 296px;
-}
-
-.box-losespacios{
-width: 296px;
-}
-
-
-.box-hr-1{
-width: 296px;
-margin: 0 auto;
-}
-
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-@media (min-width:375px) and (max-width: 388px) 
-and (-webkit-min-device-pixel-ratio: 2) {
-.box-sobre-nosotros{
-width: 342px;
-}
-
-.box-img-galeria{
-width: 342px;
-height: 342px;
-max-width: 342px;
-}
-.img-galeria{
-height: 342px;
-}
-.h-sobre-nosotros{
-font-size: 25px;
-padding-bottom: 15px;
-letter-spacing: 3px;
-margin: 0;
-}
-
-.txt-sobre-nosotros{
-font-size: 16px;
-margin-bottom: 15px;
-}
-
-.box-sobre-nosotros-2{
-margin: 20px 0;
-}
-
-.box-destino{
-width: 342px;
-}
-
-.box-losespacios{
-width: 342px;
-}
-.box-hr-1{
-width: 342px;
-margin: 0 auto;
-}
-}
-
-
-@media (min-width: 389px) and (max-width: 413px)  {
-.box-sobre-nosotros{
-width: 359px;
-}
-
-.box-img-galeria{
-width: 359px;
-height: 359px;
-max-width: 359px;
-}
-
-.img-galeria{
-height: 359px;
-}
-
-.h-sobre-nosotros{
-font-size: 27px;
-padding-bottom: 17px;
-letter-spacing: 3px;
-margin: 0;
-}
-
-.txt-sobre-nosotros{
-font-size: 17px;
-margin-bottom: 20px;
-}
-
-.box-sobre-nosotros-2{
-margin: 20px 0;
-}
-
-.box-destino{
-width: 359px;
-}
-
-.box-losespacios{
-width: 359px;
-}
-.box-hr-1{
-width: 359px;
-margin: 0 auto;
-}
-}
-
-@media (min-width: 414px) and (max-width: 2000px)  {
-.box-sobre-nosotros{
-width: 380px;
-}
-
-.box-img-galeria{
-width: 380px;
-height: 380px;
-max-width: 380px;
-}
-
-.img-galeria{
-height: 380px;
-}
-
-.h-sobre-nosotros{
-font-size: 27px;
-padding-bottom: 17px;
-letter-spacing: 3px;
-margin: 0;
-}
-
-.txt-sobre-nosotros{
-font-size: 17px;
-margin-bottom: 10px;
-}
-
-.box-sobre-nosotros-2{
-margin: 20px 0;
-}
-
-.box-destino{
-width: 380px;
-}
-
-.box-losespacios{
-width: 380px;
-}
-.box-hr-1{
-width: 380px;
-}
-}
-</style>
-
-<div id="historiaid" class="box-sobre-nosotros">
-    <div class="row">
-        <div class="col-12 "> <!--col-md-6-->
-            <div class="box-img-galeria">
-                <img class="img-galeria" src="./static/img/foto/new/portada.jpg">
-                
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container-modern">
+
+            <div class="header-inner">
+
+                <a
+                    href="#inicio"
+                    class="brand"
+                    aria-label="Hostel Torobayo - Inicio"
+                >
+
+                    <img
+                        src="./static/img/logo/hoteltorobayo-logo.svg"
+                        alt="Hostel Torobayo"
+                    >
+
+                    <span class="brand-location">
+                        VALDIVIA
+                    </span>
+
+                </a>
+
+
+                <nav
+                    class="main-nav"
+                    id="mainNav"
+                >
+
+                    <a href="#historia">
+                        Historia
+                    </a>
+
+                    <a href="#informacion">
+                        Información
+                    </a>
+
+                    <a href="#servicios">
+                        Servicios
+                    </a>
+
+                    <a href="#fotos">
+                        Fotos
+                    </a>
+
+                    <a href="#contacto">
+                        Contacto
+                    </a>
+
+                    <a
+                        href="https://www.booking.com/hotel/cl/hostel-torobayo.es.html"
+                        target="_blank"
+                        rel="noopener"
+                        class="nav-book"
+                    >
+                        Reservar
+                    </a>
+
+                </nav>
+
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
             </div>
+
         </div>
-        <div class="box-sobre-nosotros-2 col-12">  <!--col-lg-6-->
-            <h2 class="h-sobre-nosotros">Sobre Nosotros</h2>
-            <p class="txt-sobre-nosotros">Sumergido entre los frondosos árboles 
-            autóctonos del bosque Valdiviano, 
-            se encuentra <span class="p-txt-sobre-nosotros">Hostel Torobayo </span>a 
-            <span class="p-txt-sobre-nosotros">5 kilómetros</span> del centro de la cuidad.
-            </p>
-            <p class="txt-sobre-nosotros">
-            Ideal para unas vacaciones en pareja 
-            sin hijos, empresarios, profesionales 
-            y turistas  tanto nacionales como 
-            internacionales de gran encanto en 
-            la cuidad de <span class="p-txt-sobre-nosotros">Valdivia</span>.
-            </p>
-        </div>
-    </div>
-</div>
 
-<div class="box-destino">
-    <div class="row">
-        <div class="col-12">
-            <div class="box-img-galeria">
-                <img class="img-galeria" src="./static/img/foto/foto/cut/h_4-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 box-sobre-nosotros-2">
-            <p class="txt-sobre-nosotros"><span class="p-txt-sobre-nosotros">Destino privilegiado</span> que cuenta con los lugares turísticos de 
-                Valdivia muy cerca a su alrededor 
-            </p>
-                
-            <p class="txt-sobre-nosotros">(costa del pacifico 14 kilómetros, 
-                fuerte de niebla, playa de Curiñanco, parque Oncol 21 kilómetros, 
-                feria fluvial y mercado municipal.)
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="box-losespacios">
-    <div class="row">
-        <div class="col-12">
-            <div class="box-img-galeria">
-                <img class="img-galeria" src="./static/img/foto/new/comedor_bajo1.jpg">
-            </div>
-        </div>
-        <div class="col-12 box-sobre-nosotros-2">
-            <p class="txt-sobre-nosotros">
-                <span class="txt-sobre-nosotros">Los espacios del <span class="p-txt-sobre-nosotros">Hostel Torobayo</span>
-                te harán sentir en casa, gracias a las terminaciones en madera y los colores cálidos y acogedores de nuestra decoración. 
-            </p>
-            <p class="txt-sobre-nosotros">
-                <span class="txt-sobre-nosotros">Al igual que nuestro personal de 
-                    recepción, que con gran placer les 
-                    asistirá durante su estancia en 
-                    Hostel Torobayo y sabrá sugerirles itinerarios, visitas y algún buen 
-                    <span class="p-txt-sobre-nosotros">restaurante o bar</span> de la Zona.
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="box-hr-1">
-<hr class="hr-1">
-</div>
+    </header>
 
 
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
 
-<style>
-.box-informacion{
-margin: 0 auto;
-}
+    <main id="inicio">
 
-.box-h-informacio{
-}
+        <section class="hero">
 
-.h-informacion{
-color: #000000;
-font-family: 'Neuer Weltschmerz DEMO';
-src: url('NeuerWeltschmerzDEMO.woff2') format('woff2'),
-url('NeuerWeltschmerzDEMO.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-}
+            <img
+                class="hero-image"
+                src="./static/img/foto/new/portada.jpg"
+                alt="Hostel Torobayo en Valdivia"
+            >
 
-.box-wrap-informacion{
-position: relative;
-border: 1px solid #EEEEEE;
-}
+            <div class="container-modern hero-content">
 
-.box-wrap-informacion:hover{
-background: #EEEEEE;
-}
-
-.box-img-wrap-informacion{
-display: inline-block;
-
-text-align: center;
-background: #EEEEEE;
-}
-
-.img-wrap-informacion{
-}
-
-.box-txt-wrap-informacion{
-
-display: inline-block;
-position: absolute;
-right: 0;
-padding: 0 12px;
-}
-.txt-wrap-informacion{
-color: #474747;
-font-family: 'Modeco Trial';
-src: url('ModecoTrial-Regular.woff2') format('woff2'),
-url('ModecoTrial-Regular.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-position: relative;
-top: 50%;
--ms-transform: translateY(-50%);
--webkit-transform: translateY(-50%);
-transform: translateY(-50%)
-}
-.box-hr-3{
-width: 380px;
-}
-
-
-
-.box-informacion{
-width: 296px;
-margin: 0 auto;
-}
-.h-informacion{
-font-size: 23px;
-letter-spacing: 3px;
-padding: 10px 0 20px;
-}
-
-.box-wrap-informacion{
-width: 296px;
-height: 102px;
-margin-bottom: 14px;
-}
-
-.box-img-wrap-informacion{
-width: 40px;
-height: 100px;
-line-height: 86px;
-}
-
-.img-wrap-informacion{
-width: 24px;
-}
-
-.box-txt-wrap-informacion{
-width: 243px;
-height: 100px;
-line-height:18px;
-padding: 0 2px;
-}
-
-.txt-wrap-informacion{
-font-size: 13px;
-}
-
-.box-hr-3{
-width: 296px;
-margin: 10px auto;
-}
-
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-@media (min-width:375px) and (max-width: 388px) 
-and (-webkit-min-device-pixel-ratio: 2) {
-.box-informacion{
-width: 342px;
-margin: 0 auto;
-}
-.h-informacion{
-font-size: 23px;
-letter-spacing: 3px;
-padding: 15px 0 20px;
-}
-
-.box-wrap-informacion{
-width: 342px;
-height: 102px;
-margin-bottom: 15px;
-}
-
-.box-img-wrap-informacion{
-width: 62px;
-height: 100px;
-line-height: 86px;
-}
-
-.img-wrap-informacion{
-width: 26px;
-}
-
-.box-txt-wrap-informacion{
-width: 268px;
-height: 100px;
-line-height:18px;
-padding: 0 2px;
-}
-
-.txt-wrap-informacion{
-font-size: 14px;
-}
-
-.box-hr-3{
-width: 342px;
-margin: 20px auto;
-}
-}
-@media (min-width: 389px) and (max-width: 413px)  {
-.box-informacion{
-width: 359px;
-margin: 0 auto;
-}
-.h-informacion{
-font-size: 27px;
-letter-spacing: 3px;
-padding: 17px 0 24px;
-}
-
-.box-wrap-informacion{
-width: 359px;
-height: 102px;
-margin-bottom: 15px;
-}
-
-.box-img-wrap-informacion{
-width: 62px;
-height: 100px;
-line-height: 86px;
-}
-
-.img-wrap-informacion{
-width: 28px;
-}
-
-.box-txt-wrap-informacion{
-width: 282px;
-height: 100px;
-line-height:18px;
-padding: 0 2px;
-}
-
-.txt-wrap-informacion{
-font-size: 14px;
-}
-
-.box-hr-3{
-width: 359px;
-margin: 20px auto;
-}
-}
-
-@media (min-width: 414px) and (max-width: 2000px)  {
-.box-informacion{
-width: 380px;
-margin: 0 auto;
-}
-.h-informacion{
-font-size: 27px;
-letter-spacing: 3px;
-padding: 17px 0 24px;
-}
-
-.box-wrap-informacion{
-width: 380px;
-height: 102px;
-margin-bottom: 15px;
-}
-
-.box-img-wrap-informacion{
-width: 62px;
-height: 100px;
-line-height: 86px;
-}
-
-.img-wrap-informacion{
-width: 28px;
-}
-
-.box-txt-wrap-informacion{
-width: 300px;
-height: 100px;
-line-height:18px;
-padding: 0 2px;
-}
-
-.txt-wrap-informacion{
-font-size: 15px;
-}
-
-.box-hr-3{
-width: 380px;
-margin: 20px auto;
-}
-}
-</style>
-
-<div id="informacionid" class="box-informacion">
-    <div class="box-h-informacion">
-        <h2 class="h-informacion">Informacion</h2>
-    </div>
-    <div class="row">
-        <div class="col-12">  <!--col-md-6-->
-            <div class="box-wrap-informacion">
-                <div class="box-img-wrap-informacion">
-                    <img class="img-wrap-informacion" src="./static/img/ico/h_01-avion.svg">
+                <div class="hero-kicker">
+                    Hostel Torobayo · Valdivia · Chile
                 </div>
-                <div class="box-txt-wrap-informacion">
-                    <p class="txt-wrap-informacion">
-                        El aeropuerto más cercano es el de 
-                        Pichoy ubicado a 37 kilómetros del Hostel.
+
+                <h1 class="hero-title">
+                    Descansa entre
+                    <span>naturaleza.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Un lugar acogedor entre los frondosos árboles
+                    del bosque valdiviano, a pocos kilómetros del
+                    centro de Valdivia.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="https://www.booking.com/hotel/cl/hostel-torobayo.es.html"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn-modern btn-primary"
+                    >
+                        Reservar alojamiento
+                    </a>
+
+                    <a
+                        href="#fotos"
+                        class="btn-modern btn-secondary"
+                    >
+                        Ver fotografías
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CARACTERÍSTICAS
+        ====================================================== -->
+
+        <section class="feature-strip">
+
+            <div class="container-modern">
+
+                <div class="feature-grid">
+
+                    <div class="feature-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <div>
+                            <strong>Valdivia</strong>
+                            <span>Los Ríos · Chile</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <i class="fa-solid fa-bed"></i>
+
+                        <div>
+                            <strong>Habitaciones</strong>
+                            <span>Para dos personas</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <i class="fa-solid fa-mug-saucer"></i>
+
+                        <div>
+                            <strong>Desayuno</strong>
+                            <span>Incluido en tarifa</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <i class="fa-solid fa-wifi"></i>
+
+                        <div>
+                            <strong>WiFi</strong>
+                            <span>Internet disponible</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HISTORIA
+        ====================================================== -->
+
+        <section
+            class="section intro"
+            id="historia"
+        >
+
+            <div class="container-modern">
+
+                <div class="intro-grid">
+
+                    <div class="intro-image">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_4-hosteltorobayo.jpg"
+                            alt="Hostel Torobayo rodeado de naturaleza"
+                            loading="lazy"
+                        >
+
+                        <div class="intro-badge">
+
+                            <strong>5 km</strong>
+
+                            <span>
+                                del centro
+                                <br>
+                                de Valdivia
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="intro-copy">
+
+                        <span class="eyebrow">
+                            Sobre nosotros
+                        </span>
+
+                        <h2 class="section-title">
+                            Un refugio en
+                            el bosque valdiviano.
+                        </h2>
+
+                        <p>
+                            Sumergido entre los frondosos árboles
+                            autóctonos del bosque Valdiviano, se
+                            encuentra <strong>Hostel Torobayo</strong>,
+                            a <strong>5 kilómetros</strong> del centro
+                            de la ciudad.
+                        </p>
+
+                        <p>
+                            Ideal para unas vacaciones en pareja,
+                            empresarios, profesionales y turistas
+                            tanto nacionales como internacionales
+                            que buscan disfrutar de la ciudad de
+                            <strong>Valdivia</strong>.
+                        </p>
+
+                        <p>
+                            Los espacios del hostel combinan
+                            terminaciones en madera con colores
+                            cálidos y acogedores para que durante
+                            tu estadía puedas sentirte como en casa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DESTINO
+        ====================================================== -->
+
+        <section class="section destination">
+
+            <div class="container-modern">
+
+                <div class="destination-grid">
+
+                    <div class="destination-copy">
+
+                        <span class="eyebrow">
+                            Destino privilegiado
+                        </span>
+
+                        <h2 class="section-title">
+                            Valdivia
+                            empieza aquí.
+                        </h2>
+
+                        <p>
+                            Hostel Torobayo cuenta con una ubicación
+                            privilegiada para descubrir Valdivia,
+                            la costa del Pacífico y algunos de los
+                            lugares turísticos más destacados de
+                            sus alrededores.
+                        </p>
+
+                        <p>
+                            Costa del Pacífico a 14 km, Fuerte de
+                            Niebla, playa de Curiñanco, Parque Oncol
+                            a 21 km, Feria Fluvial y Mercado Municipal.
+                        </p>
+
+                    </div>
+
+
+                    <div class="destination-image">
+
+                        <img
+                            src="./static/img/foto/new/comedor_bajo1.jpg"
+                            alt="Espacios interiores de Hostel Torobayo"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INFORMACIÓN
+        ====================================================== -->
+
+        <section
+            class="section information"
+            id="informacion"
+        >
+
+            <div class="container-modern">
+
+                <div class="section-header">
+
+                    <span class="eyebrow">
+                        Tu estadía
+                    </span>
+
+                    <h2 class="section-title">
+                        Información
+                    </h2>
+
+                    <p class="section-text">
+                        Todo lo que necesitas saber para disfrutar
+                        de una estadía cómoda y tranquila.
                     </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-12">
-            <div class="box-wrap-informacion">
-                <div class="box-img-wrap-informacion">
-                    <img class="img-wrap-informacion" src="./static/img/ico/h_02-personas.svg">
                 </div>
-                <div class="box-txt-wrap-informacion">
-                    <p class="txt-wrap-informacion">
-                        Todas nuestras habitaciones 
-                        están diseñadas para dos 
-                        personas.
+
+
+                <div class="info-grid">
+
+
+                    <article class="info-card">
+
+                        <div class="info-icon">
+
+                            <img
+                                src="./static/img/ico/h_01-avion.svg"
+                                alt=""
+                            >
+
+                        </div>
+
+                        <h3>
+                            Cómo llegar
+                        </h3>
+
+                        <p>
+                            El aeropuerto más cercano es el de
+                            Pichoy, ubicado a 37 kilómetros
+                            del Hostel.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <div class="info-icon">
+
+                            <img
+                                src="./static/img/ico/h_02-personas.svg"
+                                alt=""
+                            >
+
+                        </div>
+
+                        <h3>
+                            Habitaciones
+                        </h3>
+
+                        <p>
+                            Todas nuestras habitaciones están
+                            diseñadas para dos personas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <div class="info-icon">
+
+                            <img
+                                src="./static/img/ico/h_03-camas.svg"
+                                alt=""
+                            >
+
+                        </div>
+
+                        <h3>
+                            Comodidad
+                        </h3>
+
+                        <p>
+                            Baño privado, calefacción, armario,
+                            confortables camas, Smart TV,
+                            ropa de cama y toallas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <div class="info-icon">
+
+                            <img
+                                src="./static/img/ico/h_04-comedor.svg"
+                                alt=""
+                            >
+
+                        </div>
+
+                        <h3>
+                            Desayuno
+                        </h3>
+
+                        <p>
+                            Área de comedor con vistas al patio
+                            y desayuno tipo continental, adaptado
+                            al mágico sur.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <div class="info-icon">
+
+                            <img
+                                src="./static/img/ico/h_05-sendero.svg"
+                                alt=""
+                            >
+
+                        </div>
+
+                        <h3>
+                            Actividades
+                        </h3>
+
+                        <p>
+                            Disfruta de actividades en Valdivia
+                            y sus alrededores como senderismo
+                            y ciclismo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <div class="info-icon">
+
+                            <img
+                                src="./static/img/ico/h_06-seguridad.svg"
+                                alt=""
+                            >
+
+                        </div>
+
+                        <h3>
+                            Descanso
+                        </h3>
+
+                        <p>
+                            En Hostel Torobayo experimentarás
+                            un descanso seguro y tranquilo.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SERVICIOS
+        ====================================================== -->
+
+        <section
+            class="section services"
+            id="servicios"
+        >
+
+            <div class="container-modern">
+
+                <div class="section-header">
+
+                    <span class="eyebrow">
+                        Comodidades
+                    </span>
+
+                    <h2 class="section-title">
+                        Servicios y
+                        facilidades
+                    </h2>
+
+                    <p class="section-text">
+                        Todo pensado para que disfrutes
+                        tu estadía en Valdivia.
                     </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-12">
-            <div class="box-wrap-informacion">
-                <div class="box-img-wrap-informacion">
-                    <img class="img-wrap-informacion" src="./static/img/ico/h_03-camas.svg">
                 </div>
-                <div class="box-txt-wrap-informacion">
-                    <p class="txt-wrap-informacion">
-                        Cuentan con baño privado, calefacción, 
-                        armario,confortables camas, Smart TV, 
-                        ropa de cama y toallas.
+
+
+                <div class="services-grid">
+
+
+                    <article class="service-card">
+
+                        <img
+                            src="./static/img/ico/h_07-desayuno.svg"
+                            alt=""
+                        >
+
+                        <h3>
+                            Desayuno
+                        </h3>
+
+                        <span>
+                            Incluido en tarifa
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <img
+                            src="./static/img/ico/h_08-wifi.svg"
+                            alt=""
+                        >
+
+                        <h3>
+                            Internet WiFi
+                        </h3>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <img
+                            src="./static/img/ico/h_09-auto.svg"
+                            alt=""
+                        >
+
+                        <h3>
+                            Alquiler de automóvil
+                        </h3>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <img
+                            src="./static/img/ico/h_10-aparca.svg"
+                            alt=""
+                        >
+
+                        <h3>
+                            Aparcamiento
+                        </h3>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <img
+                            src="./static/img/ico/h_11-snak.svg"
+                            alt=""
+                        >
+
+                        <h3>
+                            Snack y Bar
+                        </h3>
+
+                        <span>
+                            De pago
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <img
+                            src="./static/img/ico/h_12-lavanderia.svg"
+                            alt=""
+                        >
+
+                        <h3>
+                            Servicio de lavandería
+                        </h3>
+
+                        <span>
+                            De pago
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card wide">
+
+                        <img
+                            src="./static/img/ico/h_13-terraza.svg"
+                            alt=""
+                        >
+
+                        <h3>
+                            Terraza
+                        </h3>
+
+                        <span>
+                            Disfruta los espacios exteriores
+                            del Hostel Torobayo.
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GALERÍA
+        ====================================================== -->
+
+        <section
+            class="section gallery"
+            id="fotos"
+        >
+
+            <div class="container-modern">
+
+                <div class="gallery-intro">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            Hostel Torobayo
+                        </span>
+
+                        <h2 class="section-title">
+                            Conoce nuestros
+                            espacios.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-grid">
+
+
+                    <!-- 01 -->
+
+                    <div class="gallery-item large">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_14-hosteltorobayo.jpg"
+                            alt="Espacios comunes"
+                            loading="lazy"
+                        >
+
+                        <span class="gallery-label">
+                            Espacios comunes
+                        </span>
+
+                    </div>
+
+
+                    <!-- 02 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/new/comedor_bajo2.jpg"
+                            alt="Comedor"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 03 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/new/comedor_bajo3.jpg"
+                            alt="Comedor"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 04 -->
+
+                    <div class="gallery-item tall">
+
+                        <img
+                            src="./static/img/foto/new/comedor_arriba1.jpg"
+                            alt="Comedor superior"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 05 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/new/comedor_arriba2.jpg"
+                            alt="Espacios interiores"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 06 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_5-hosteltorobayo.jpg"
+                            alt="Habitación"
+                            loading="lazy"
+                        >
+
+                        <span class="gallery-label">
+                            Habitaciones
+                        </span>
+
+                    </div>
+
+
+                    <!-- 07 -->
+
+                    <div class="gallery-item large">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_6-hosteltorobayo.jpg"
+                            alt="Habitación Hostel Torobayo"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 08 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_7-hosteltorobayo.jpg"
+                            alt="Habitación"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 09 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/new/dormi1.jpg"
+                            alt="Dormitorio"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 10 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_8-hosteltorobayo.jpg"
+                            alt="Habitación"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 11 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_10-hosteltorobayo.jpg"
+                            alt="Baño"
+                            loading="lazy"
+                        >
+
+                        <span class="gallery-label">
+                            Baños
+                        </span>
+
+                    </div>
+
+
+                    <!-- 12 -->
+
+                    <div class="gallery-item tall">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_11-hosteltorobayo.jpg"
+                            alt="Baño"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 13 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_12-hosteltorobayo.jpg"
+                            alt="Baño"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <!-- 14 -->
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="./static/img/foto/new/bano.jpg"
+                            alt="Baño"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ALREDEDORES
+        ====================================================== -->
+
+        <section class="section nearby">
+
+            <div class="container-modern">
+
+                <div class="section-header">
+
+                    <span class="eyebrow">
+                        Descubre Valdivia
+                    </span>
+
+                    <h2 class="section-title">
+                        A pocos kilómetros
+                        de aquí.
+                    </h2>
+
+                    <p class="section-text">
+                        Algunos de los lugares que puedes visitar
+                        durante tu estadía.
                     </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-12">
-            <div class="box-wrap-informacion">
-                <div class="box-img-wrap-informacion">
-                    <img class="img-wrap-informacion" src="./static/img/ico/h_04-comedor.svg">
                 </div>
-                <div class="box-txt-wrap-informacion">
-                    <p class="txt-wrap-informacion">
-                        Nuestra área de comedor con vistas al patio 
-                        ofrece un completo desayuno tipo continental, 
-                        adaptado un poco al mágico sur con embutidos, 
-                        queso, cereales y huevos. 
+
+
+                <div class="nearby-grid">
+
+
+                    <article class="nearby-card">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_15-hosteltorobayo.jpg"
+                            alt="Cervecería Kunstmann"
+                            loading="lazy"
+                        >
+
+                        <div class="nearby-content">
+
+                            <h3>
+                                Cervecería Kunstmann
+                            </h3>
+
+                            <span class="distance">
+                                <i class="fa-solid fa-location-dot"></i>
+                                1.5 km
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="nearby-card">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_16-hosteltorobayo.jpg"
+                            alt="Feria Fluvial"
+                            loading="lazy"
+                        >
+
+                        <div class="nearby-content">
+
+                            <h3>
+                                Feria Fluvial
+                            </h3>
+
+                            <span class="distance">
+                                <i class="fa-solid fa-location-dot"></i>
+                                4.9 km
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="nearby-card">
+
+                        <img
+                            src="./static/img/foto/foto/cut/h_17-hosteltorobayo.jpg"
+                            alt="Fuerte Niebla"
+                            loading="lazy"
+                        >
+
+                        <div class="nearby-content">
+
+                            <h3>
+                                Fuerte Niebla
+                            </h3>
+
+                            <span class="distance">
+                                <i class="fa-solid fa-location-dot"></i>
+                                14 km
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="nearby-card">
+
+                        <img
+                            src="./static/img/foto/new/oncol_parque.jpeg"
+                            alt="Parque Oncol"
+                            loading="lazy"
+                        >
+
+                        <div class="nearby-content">
+
+                            <h3>
+                                Parque Oncol
+                            </h3>
+
+                            <span class="distance">
+                                <i class="fa-solid fa-location-dot"></i>
+                                21 km
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACTO
+        ====================================================== -->
+
+        <section
+            class="section contact"
+            id="contacto"
+        >
+
+            <div class="container-modern">
+
+                <div class="contact-grid">
+
+
+                    <div class="contact-card">
+
+                        <span class="eyebrow">
+                            Reserva y contacto
+                        </span>
+
+                        <h2 class="section-title">
+                            Ven a conocer
+                            Valdivia.
+                        </h2>
+
+                        <p class="section-text">
+                            Contáctanos para consultar disponibilidad,
+                            reservas o cualquier información sobre
+                            tu estadía.
+                        </p>
+
+
+                        <div class="contact-links">
+
+                            <a
+                                href="mailto:hosteltorobayo@gmail.com"
+                                class="contact-link"
+                            >
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                                <span>
+                                    hosteltorobayo@gmail.com
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="tel:+56975823095"
+                                class="contact-link"
+                            >
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <span>
+                                    +56 9 7582 3095
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="https://goo.gl/maps/japp4u6XSSvaDaTW8"
+                                target="_blank"
+                                rel="noopener"
+                                class="contact-link"
+                            >
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                <span>
+                                    Ruta T-340 494, Valdivia
+                                </span>
+
+                            </a>
+
+
+                        </div>
+
+
+                        <div class="hero-actions">
+
+                            <a
+                                href="https://wa.me/56975823095"
+                                target="_blank"
+                                rel="noopener"
+                                class="btn-modern btn-primary"
+                            >
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                WhatsApp
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="map-wrapper">
+
+                        <div id="map"></div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="cta">
+
+            <div class="container-modern">
+
+                <div class="cta-content">
+
+                    <h2>
+                        Tu próxima estadía
+                        comienza en Valdivia.
+                    </h2>
+
+                    <p>
+                        Naturaleza, tranquilidad y la magia del
+                        sur de Chile en Hostel Torobayo.
                     </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-12">
-            <div class="box-wrap-informacion">
-                <div class="box-img-wrap-informacion">
-                    <img class="img-wrap-informacion" src="./static/img/ico/h_05-sendero.svg">
+                    <a
+                        href="https://wa.me/56975823095"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn-modern btn-primary"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        Consultar disponibilidad
+
+                    </a>
+
                 </div>
-                <div class="box-txt-wrap-informacion">
-                    <p class="txt-wrap-informacion">
-                        Los pasajeros del Hostel Torobayo podrán 
-                        disfrutar de actividades en Valdivia 
-                        y sus alrededores como senderismo 
-                        y ciclismo.
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="container-modern">
+
+            <div class="footer-main">
+
+                <div>
+
+                    <img
+                        class="footer-logo"
+                        src="./static/img/logo/hoteltorobayo-logo.svg"
+                        alt="Hostel Torobayo"
+                    >
+
+                    <p class="footer-location">
+                        Ruta T-340 494 · Valdivia · Los Ríos · Chile
                     </p>
+
                 </div>
-            </div>
-        </div>
 
-        <div class="col-12">
-            <div class="box-wrap-informacion">
-                <div class="box-img-wrap-informacion">
-                    <img class="img-wrap-informacion" src="./static/img/ico/h_06-seguridad.svg">
-                </div>
-                <div class="box-txt-wrap-informacion">
-                    <p class="txt-wrap-informacion">
-                        En Hostel Torobayo 
-                        experimentará un descanso 
-                        seguro.
-                    </p>
-                </div>
-            </div>
-        </div>
 
-    </div>
-</div>
+                <nav class="footer-nav">
 
+                    <a href="#inicio">
+                        Inicio
+                    </a>
 
-<div class="box-hr-3">
-<hr class="hr">
-</div>
+                    <a href="#historia">
+                        Historia
+                    </a>
 
+                    <a href="#servicios">
+                        Servicios
+                    </a>
 
-<style>
-.box-servicios{
+                    <a href="#fotos">
+                        Fotos
+                    </a>
 
-margin: 0 auto;
-}
+                    <a href="#contacto">
+                        Contacto
+                    </a>
 
-.box-h-servicios{
-}
+                </nav>
 
-.h-servicios{
-color: #000000;
-font-family: 'Neuer Weltschmerz DEMO';
-src: url('NeuerWeltschmerzDEMO.woff2') format('woff2'),
-url('NeuerWeltschmerzDEMO.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-}
-
-.box-wrap-servicios{
-text-align: center;
-float: left;
-margin: 1px 1px;
-border: 1px solid #EEEEEE;
-}
-
-.box-wrap-servicios:hover{
-background: #EEEEEE;
-}
-
-.box-wrap-servicios-2{
-
-text-align: center;
-float: left;
-margin: 1px 1px;
-border: 1px solid #EEEEEE;
-}
-
-.box-wrap-servicios-2:hover{
-background: #EEEEEE;
-}
-
-.box-wrap-servicios-out{
-}
-.img-servicios{
-width: 36px;
-height: 36px;
-display: block;
-margin: 0 auto;
-margin: 22px auto 10px;
-}
-
-.txt-h-servicios{
-color: #000000;
-font-family: 'Josefin Sans';
-src: url('JosefinSans-SemiBold.woff2') format('woff2'),
-url('JosefinSans-SemiBold.woff') format('woff');
-font-weight: 600;
-font-style: normal;
-letter-spacing: 0.6px;
-margin: 0;
-padding: 0;
-line-height: 15px;
-}
-
-.txt-servicios{
-font-size: 9px;
-color: #858585;
-font-family: 'Josefin Sans';
-src: url('JosefinSans-SemiBold.woff2') format('woff2'),
-url('JosefinSans-SemiBold.woff') format('woff');
-font-weight: 600;
-font-style: normal;
-margin: 0;
-padding: 3px 0;
-}
-.box-hr{
-margin: 60px auto;
-}
-
-.box-servicios{
-width: 296px;
-height: 432px;
-margin: 0 auto;
-}
-.h-servicios{
-font-size: 23px;
-letter-spacing: 3px;
-padding: 10px 0 20px;
-}
-
-.box-wrap-servicios-out{
-width: 300px;
-}
-
-.box-wrap-servicios{
-width: 97px;
-height: 110px;
-margin: 1px 1px;
-border-radius: 14px;
-}
-.box-wrap-servicios-2{
-width: 296px;
-height: 110px;
-margin: 1px 1px;
-border-radius: 14px;
-}
-
-.img-servicios{
-width: 30px;
-height: 30px;
-margin: 17px auto 7px;
-}
-.txt-h-servicios{
-font-size: 11px;
-line-height: 15px;
-}
-.box-hr{
-width: 296px;
-margin: 20px auto;
-}
-
-}
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-@media (min-width:375px) and (max-width: 388px) 
-and (-webkit-min-device-pixel-ratio: 2) {
-.box-servicios{
-width: 342px;
-height: 452px;
-margin: 0 auto;
-}
-.h-servicios{
-font-size: 23px;
-letter-spacing: 3px;
-padding: 15px 0 25px;
-}
-
-.box-wrap-servicios-out{
-width: 344px;
-}
-
-.box-wrap-servicios{
-width: 112px;
-height: 118px;
-margin: 1px 1px;
-border-radius: 14px;
-}
-.box-wrap-servicios-2{
-width: 342px;
-height: 118px;
-margin: 1px 1px;
-border-radius: 14px;
-}
-
-.img-servicios{
-width: 34px;
-height: 34px;
-margin: 16px auto 12px;
-}
-.txt-h-servicios{
-font-size: 13px;
-line-height: 15px;
-}
-
-.txt-servicios{
-font-size: 10px;
-padding: 3px 0;
-}
-.box-hr{
-width: 342px;
-margin: 20px auto;
-}
-}
-
-@media (min-width: 389px) and (max-width: 413px)  {
-.box-servicios{
-width: 359px;
-height: 468px;
-margin: 0 auto;
-}
-.h-servicios{
-font-size: 27px;
-letter-spacing: 3px;
-padding: 15px 0 25px;
-}
-
-.box-wrap-servicios-out{
-width: 362px;
-}
-
-.box-wrap-servicios{
-width: 118px;
-height: 127px;
-margin: 1px 1px;
-border-radius: 14px;
-}
-.box-wrap-servicios-2{
-width: 359px;
-height: 127px;
-margin: 1px 1px;
-border-radius: 14px;
-}
-
-.img-servicios{
-width: 38px;
-height: 38px;
-margin: 16px auto 12px;
-}
-.txt-h-servicios{
-font-size: 14px;
-line-height: 15px;
-}
-
-.txt-servicios{
-font-size: 11px;
-padding: 3px 0;
-}
-.box-hr{
-width: 359px;
-margin: 20px auto;
-}
-}
-
-@media (min-width: 414px) and (max-width: 2000px)  {
-.box-servicios{
-width: 380px;
-height: 526px;
-margin: 0 auto;
-}
-.h-servicios{
-font-size: 27px;
-letter-spacing: 3px;
-padding: 15px 0 25px;
-}
-
-.box-wrap-servicios-out{
-width: 384px;
-}
-
-.box-wrap-servicios{
-width: 125px;
-height: 144px;
-margin: 1px 1px;
-border-radius: 21px;
-}
-.box-wrap-servicios-2{
-width: 380px;
-height: 144px;
-margin: 1px 1px;
-border-radius: 21px;
-}
-
-.img-servicios{
-width: 38px;
-height: 38px;
-margin: 25px auto 15px;
-}
-.txt-h-servicios{
-font-size: 14px;
-line-height: 15px;
-}
-
-.txt-servicios{
-font-size: 13px;
-padding: 3px 0;
-}
-.box-hr{
-width: 380px;
-margin: 30px auto;
-}
-
-}
-
-</style>
-
-<div class="box-servicios">
-    <div class="box-h-servicios">
-        <h2 class="h-servicios">Servicios y Facilidades</h2>
-    </div>
-
-    <div class="box-wrap-servicios-out">
-        <div class="box-wrap-servicios">
-        
-            <img class="img-servicios" src="./static/img/ico/h_07-desayuno.svg">
-            <p class="txt-h-servicios">Desayuno</p>
-            <p class="txt-servicios">(Incluido en tarifa)</p>
-
-        </div>
-
-        <div class="box-wrap-servicios">
-            <img class="img-servicios" src="./static/img/ico/h_08-wifi.svg">
-            <p class="txt-h-servicios">Internet<br> Wifi</p>
-
-        </div>
-
-        <div class="box-wrap-servicios">
-            <img class="img-servicios" src="./static/img/ico/h_09-auto.svg">
-            <p class="txt-h-servicios">Alquiler de Automóvil</p>
-
-        </div>
-
-        <div class="box-wrap-servicios">
-            <img class="img-servicios" src="./static/img/ico/h_10-aparca.svg">
-            <p class="txt-h-servicios">Aparcamiento</p>
-
-        </div>
-        
-        <div class="box-wrap-servicios">
-            <img class="img-servicios" src="./static/img/ico/h_11-snak.svg">
-            <p class="txt-h-servicios">Snack y Bar</p>
-            <p class="txt-servicios">(De Pago)</p>
-
-        </div>
-
-        <div class="box-wrap-servicios">
-            <img class="img-servicios" src="./static/img/ico/h_12-lavanderia.svg">
-            <p class="txt-h-servicios">Servicio <br> Lavanderia</p>
-            <p class="txt-servicios">(De Pago)</p>
-
-        </div>
-
-        <div class="box-wrap-servicios-2">
-            <img class="img-servicios" src="./static/img/ico/h_13-terraza.svg">
-            <p class="txt-h-servicios">Terraza</p>
-
-        </div>
-    </div>
-</div>
-
-<div class="box-hr">
-<hr class="hr">
-</div>
-
-
-<style>
-.box-foto{
-margin: 0 auto;
-background: #EEEEEE;
-border-radius: 16px;
-}
-
-.box-h-foto{
-}
-
-.h-foto{
-color: #000000;
-font-size: 26px;
-font-family: 'Neuer Weltschmerz DEMO';
-src: url('NeuerWeltschmerzDEMO.woff2') format('woff2'),
-url('NeuerWeltschmerzDEMO.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-padding:30px 0;
-letter-spacing: 3px;
-}
-
-.p-foto{
-font-size: 18px;
-color: #000000;
-font-family: 'Modeco Trial';
-src: url('ModecoTrial-Regular.woff2') format('woff2'),
-url('ModecoTrial-Regular.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-margin: 0;
-padding: 15px 13px 2px;
-letter-spacing: 1px;
-}
-
-.txt-p-foto{
-font-size: 14px;
-color: #474747;
-margin: 0;
-letter-spacing: 1px;
-font-family: 'Josefin Sans';
-src: url('JosefinSans-SemiBold.woff2') format('woff2'),
-url('JosefinSans-SemiBold.woff') format('woff');
-font-weight: 400;
-font-style: normal;
-letter-spacing: -0.2px;
-text-align: center;
-background: #d2d2d2;
-padding: 11px 0;
-border-radius: 12px 12px 0 0;
-}
-
-
-.ico-foto{
-width: 17px;
-margin: 0;
-padding: 0;
-bottom: 1px;
-position: relative;
-}
-
-.box-img-foto{
-width: 379px;
-height: 379px;
-padding: 0;
-overflow: hidden;
-max-width: 379px;
-margin: 0px auto 21px;
-}
-.img-foto{
-height: 379px;
-opacity: 1;
-}
-
-.img-foto2{
-    border-radius: 0 0 12px 12px;
-
-}
-.img-foto:hover{
-opacity: 0.9;
-}
-
-.box-hr{
-
-}
-
-
-.box-foto{
-width: 297px;
-border-radius: 14px;
-}
-.h-foto{
-font-size: 23px;
-letter-spacing: 3px;
-padding:10px 0 20px;
-}
-
-.box-img-foto{
-width: 296px;
-height: 296px;
-
-max-width: 296px;
-margin: 0px auto 14px;
-}
-.img-foto{
-width: 296px;
-height: 296px;
-
-}
-.box-hr{
-width: 296px;
-margin: 10px auto;
-}
-
-
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-@media (min-width:375px) and (max-width: 388px) 
-and (-webkit-min-device-pixel-ratio: 2) {
-.box-foto{
-width: 342px;
-border-radius: 15px;
-}
-.h-foto{
-font-size: 23px;
-letter-spacing: 3px;
-padding:15px 0 20px;
-}
-
-.p-foto{
-font-size: 23px;
-}
-
-.txt-p-foto{
-font-size: 19px;
-
-}
-
-.ico-foto{
-width: 20px;
-
-bottom:2px;
-}
-
-.box-img-foto{
-width: 342px;
-height: 342px;
-
-max-width: 342px;
-margin: 0px auto 17px;
-}
-.img-foto{
-width: 342px;
-height: 342px;
-
-}
-.box-hr{
-width: 342px;
-margin: 10px auto;
-}
-}
-
-
-@media (min-width: 389px) and (max-width: 413px)  {
-.box-foto{
-width: 359px;
-border-radius: 15px;
-}
-.h-foto{
-font-size: 27px;
-letter-spacing: 3px;
-padding:15px 0 20px;
-}
-.p-foto{
-font-size: 20px;
-}
-
-.txt-p-foto{
-font-size: 16px;
-}
-
-.ico-foto{
-width: 20px;
-bottom:2px;
-}
-.box-img-foto{
-width: 359px;
-height: 359px;
-max-width: 359px;
-margin: 0px auto 18px;
-}
-.img-foto{
-width: 359px;
-height: 359px;
-
-}
-.box-hr{
-width: 359px;
-margin: 15px auto;
-}
-}
-
-@media (min-width: 414px) and (max-width: 2000px)  {
-.box-foto{
-width: 380px;
-border-radius: 15px;
-}
-.h-foto{
-font-size: 27px;
-letter-spacing: 3px;
-padding:15px 0 30px;
-}
-
-.p-foto{
-font-size: 24px;
-}
-
-.txt-p-foto{
-font-size: 18px;
-}
-
-.ico-foto{
-width: 20px;
-bottom:2px;
-}
-
-.box-img-foto{
-width: 379px;
-height: 379px;
-max-width: 379px;
-margin: 0px auto 18px;
-}
-.img-foto{
-width: 379px;
-height: 379px;
-
-}
-.box-hr{
-width: 380px;
-margin: 30px auto;
-}
-}
-</style>
-    
-<div class="box-foto">
-    <div class="box-h-foto">
-        <h2 id="fotoid" class="h-foto">Fotos</h2>
-    </div>
-    <div class="row">
-        <p class="p-foto">> Espacios comunes</p>
-
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_14-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/new/comedor_bajo1.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/new/comedor_bajo2.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/new/comedor_bajo3.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/new/comedor_arriba1.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/new/comedor_arriba2.jpg">
-            </div>
-        </div>
-        <p class="p-foto">> Habitaciones</p>
-
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_4-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_5-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_6-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_7-hosteltorobayo.jpg">
-            </div>
-        </div>
-
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_8-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/new/dormi1.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_9-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <p class="p-foto">> Baños</p>
-
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_10-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_11-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_12-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/foto/cut/h_13-hosteltorobayo.jpg">
-            </div>
-        </div>
-        <div class="col-12 ">
-            <div class="box-img-foto">
-                <img class="img-foto" src="./static/img/foto/new/bano.jpg">
-            </div>
-        </div>
-        <p class="p-foto">> Alrededores</p>
-        <div class="col-12 ">
-            <p class="txt-p-foto">Cervecería Kunstmann a 
-                <img class="ico-foto" src="./static/img/ico/h-14-punto.svg">1.5 km</p>
-
-            <div class="box-img-foto">
-                <img class="img-foto img-foto2" src="./static/img/foto/foto/cut/h_15-hosteltorobayo.jpg">
-
-            </div>
-            <p class="txt-p-foto">Feria Fluvial a 
-                <img class="ico-foto" src="./static/img/ico/h-14-punto.svg">4.9 km</p>
-
-            <div class="box-img-foto">
-                <img class="img-foto img-foto2" src="./static/img/foto/foto/cut/h_16-hosteltorobayo.jpg">
-            </div>
-
-            <p class="txt-p-foto">Fuerte Niebla a <img class="ico-foto" src="./static/img/ico/h-14-punto.svg">14 km</p>
-
-            <div class="box-img-foto">
-                <img class="img-foto img-foto2" src="./static/img/foto/foto/cut/h_17-hosteltorobayo.jpg">
             </div>
 
 
-            <p class="txt-p-foto">Parque Oncol a <img class="ico-foto" src="./static/img/ico/h-14-punto.svg">21 km</p>
+            <div class="footer-bottom">
 
-            <div class="box-img-foto">
-                <img class="img-foto img-foto2" src="./static/img/foto/new/oncol_parque.jpeg">
+                <span>
+                    © Hostel Torobayo · Valdivia
+                </span>
+
+
+                <a
+                    href="https://www.skeleton.cl"
+                    target="_blank"
+                    rel="noopener"
+                    class="skeleton-credit"
+                >
+
+                    <img
+                        src="./static/img/logo/skeleton-paul-pineda-logo.svg"
+                        alt="Skeleton"
+                    >
+
+                    Hecho por Skeleton · Paul Pineda
+
+                </a>
+
             </div>
+
         </div>
-    </div>
-</div>
 
-<div class="box-hr">
-<hr class="hr">
-</div>
+    </footer>
 
 
+    <!-- =========================================================
+         WHATSAPP
+    ========================================================= -->
 
-<style>
-.box-contacto{
-margin: 0 auto;
-}
+    <a
+        class="whatsapp"
+        href="https://wa.me/56975823095"
+        target="_blank"
+        rel="noopener"
+        aria-label="Contactar por WhatsApp"
+    >
 
-.h-contacto{
-color: #000000;
-font-family: 'Neuer Weltschmerz DEMO';
-src: url('NeuerWeltschmerzDEMO.woff2') format('woff2'),
-url('NeuerWeltschmerzDEMO.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
+        <i class="fa-brands fa-whatsapp"></i>
 
-}
+    </a>
 
-.box-contacto-info{
-}
 
-.txt-contacto{
-color: #000000;
-font-family: 'Modeco Trial';
-src: url('ModecoTrial-Regular.woff2') format('woff2'),
-url('ModecoTrial-Regular.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-text-decoration: none;
-}
+    <!-- =========================================================
+         GOOGLE MAPS
+    ========================================================= -->
 
-.txt-contacto:hover{
-color: #969696;
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWpBat78d7e9erBuMi_6bBYehzmCjd2iw"
+    ></script>
 
-}
 
-.txt-contacto-2{
-color: #474747;
-font-family: 'Modeco Trial';
-src: url('ModecoTrial-Regular.woff2') format('woff2'),
-url('ModecoTrial-Regular.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-text-decoration: none;
-}
-.mapa-box{
+    <script>
 
-}
-.txt-contacto-2:hover{
-color: #969696;
+        /* =====================================================
+           HEADER SCROLL
+        ===================================================== */
 
-}
+        const siteHeader =
+            document.getElementById("siteHeader");
 
-.box-contacto{
-width: 296px;
-margin: 0 auto;
-}
+        function updateHeader() {
 
-.h-contacto{
-font-size: 23px;
-letter-spacing: 3px;
-padding:10px 0;
-}
+            if (window.scrollY > 30) {
 
-.txt-contacto{
-font-size: 17px;
-letter-spacing: 1px;
-line-height: 44px;
-}
-.txt-contacto-2{
-font-size: 17px;
-letter-spacing: 1px;
-line-height: 44px;
-}
-.mapa-box{
-width: 296px;
-padding-top: 200px;
-padding-bottom: 200px;
-margin:20px auto;
-}
+                siteHeader.classList.add("scrolled");
 
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-@media (min-width:375px) and (max-width: 388px) 
-and (-webkit-min-device-pixel-ratio: 2) {
-.box-contacto{
-width: 342px;
-margin: 0 auto;
-}
+            } else {
 
-.h-contacto{
-font-size: 23px;
-letter-spacing: 3px;
-padding:15px 0;
-}
+                siteHeader.classList.remove("scrolled");
 
-.txt-contacto{
-font-size: 18px;
-letter-spacing: 1px;
-line-height: 44px;
-}
-.txt-contacto-2{
-font-size: 18px;
-letter-spacing: 1px;
-line-height: 44px;
-}
-.mapa-box{
-width: 342px;
-padding-top: 220px;
-padding-bottom: 220px;
-margin:20px auto;
-}
-}
-
-@media (min-width: 389px) and (max-width: 413px)  {
-.box-contacto{
-width: 359px;
-margin: 0 auto;
-}
-
-.h-contacto{
-font-size: 27px;
-letter-spacing: 3px;
-padding:15px 0;
-}
-
-.txt-contacto{
-font-size: 19px;
-letter-spacing: 1px;
-line-height: 44px;
-}
-.txt-contacto-2{
-font-size: 19px;
-letter-spacing: 1px;
-line-height: 44px;
-}
-.mapa-box{
-width: 359px;
-padding-top: 230px;
-padding-bottom: 230px;
-margin:20px auto;
-}
-}
-
-@media (min-width: 414px) and (max-width: 2000px)  {
-.box-contacto{
-width: 380px;
-
-}
-
-.h-contacto{
-font-size: 27px;
-letter-spacing: 3px;
-padding:15px 0;
-}
-
-.txt-contacto{
-font-size: 19px;
-letter-spacing: 1px;
-line-height: 48px;
-}
-.txt-contacto-2{
-font-size: 19px;
-letter-spacing: 1px;
-line-height: 48px;
-}
-.mapa-box{
-width: 380px;
-padding-top: 250px;
-padding-bottom: 250px;
-margin:20px auto;
-}
-}
-</style>
-
-<div class="box-contacto">
-<div class="box-h-contacto">
-<h2 id="contactoid" class="h-contacto">Contacto</h2>
-</div>
-<div class="box-contacto-info">
-<a href="mailto:hosteltorobayo@gmail.com" class="txt-contacto">hosteltorobayo@gmail.com</a>
-<br>
-<a href="callto:+56975823095" class="txt-contacto">+56 9 7582 3095</a>
-<br>
-<a href="https://goo.gl/maps/japp4u6XSSvaDaTW8" target="_blank" class="txt-contacto-2">Ruta T - 340 494, Valdivia</a>
-</div>
-</div>
-
-<section id="map" class="container-fluid mapa-box ">
-</section>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWpBat78d7e9erBuMi_6bBYehzmCjd2iw"></script>
-<script type="text/javascript">
-google.maps.event.addDomListener(window, 'load', init);
-function init() {
-var mapOptions = {
-zoom: 13,
-fullscreenControl: false,
-streetViewControl: false,
-mapTypeControl: false,
-center: new google.maps.LatLng(-39.827591, -73.273461),
-styles: [
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text",
-        "stylers": [
-            {
-                "visibility": "on"
             }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
+
+        }
+
+        window.addEventListener(
+            "scroll",
+            updateHeader,
+            { passive: true }
+        );
+
+        updateHeader();
+
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const mainNav =
+            document.getElementById("mainNav");
+
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    mainNav.classList.toggle("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+                menuToggle.innerHTML = isOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
+
             }
-        ]
-    },
-    {
-        "featureType": "transit.station.rail",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "saturation": "-100"
+        );
+
+
+        /* Cerrar menú al navegar */
+
+        mainNav
+            .querySelectorAll("a")
+            .forEach(
+                function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            mainNav.classList.remove("open");
+
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                            menuToggle.innerHTML =
+                                '<i class="fa-solid fa-bars"></i>';
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* =====================================================
+           GOOGLE MAP
+        ===================================================== */
+
+        function initMap() {
+
+            const position = {
+                lat: -39.827591,
+                lng: -73.273461
+            };
+
+
+            const mapOptions = {
+
+                zoom: 13,
+
+                center: position,
+
+                fullscreenControl: false,
+
+                streetViewControl: false,
+
+                mapTypeControl: false,
+
+                zoomControl: true,
+
+                styles: [
+
+                    {
+                        featureType:
+                            "administrative",
+                        elementType:
+                            "labels.text",
+                        stylers: [
+                            {
+                                visibility: "on"
+                            }
+                        ]
+                    },
+
+                    {
+                        featureType:
+                            "poi",
+                        elementType:
+                            "all",
+                        stylers: [
+                            {
+                                visibility: "off"
+                            }
+                        ]
+                    },
+
+                    {
+                        featureType:
+                            "transit.station.rail",
+                        elementType:
+                            "all",
+                        stylers: [
+                            {
+                                visibility: "simplified"
+                            },
+                            {
+                                saturation: "-100"
+                            }
+                        ]
+                    },
+
+                    {
+                        featureType:
+                            "water",
+                        elementType:
+                            "all",
+                        stylers: [
+                            {
+                                visibility: "on"
+                            }
+                        ]
+                    }
+
+                ]
+
+            };
+
+
+            const mapElement =
+                document.getElementById("map");
+
+
+            if (!mapElement) {
+                return;
             }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    }
-]
-};
-var mapElement = document.getElementById('map');
-var map = new google.maps.Map(mapElement, mapOptions);
-
-var image = {
-url: './static/img/ico/icon.svg',
-scaledSize : new google.maps.Size(100, 100)
-};
-
-var marker = new google.maps.Marker({
-position: new google.maps.LatLng(-39.827591, -73.273461),
-map: map,
-icon:image               
-});
-}
-</script>
 
 
-
-<div class="menu-nav-2">
-    <div class="box-link-menu">
-        <a class="link-menu" href="#inicioid">INICIO</a>
-        <p class="lnl-menu">|</p>
-        <a class="link-menu" href="#historiaid">HISTORIA</a>
-        <p class="lnl-menu">|</p>
-        <a class="link-menu" href="#informacionid">INFO</a>
-        <p class="lnl-menu">|</p>
-        <a class="link-menu" href="#fotoid">FOTOS</a>
-    </div>
-</div>
-
-<style>
-.box-logo-footer{
-background: #EEEEEE;
-margin: 0 auto;
-text-align: center;
-}
-
-.img-logo-footer{
-}
-
-/**-------**/
-.box-skeleton{
-background: #000000;
-margin: 0 auto;
-text-align: center;
-}
-
-.logo-skeleton{
-width: 48px;
-}
-
-.txt-skeleton{
-font-family: 'Modeco Trial';
-src: url('ModecoTrial-Regular.woff2') format('woff2'),
-url('ModecoTrial-Regular.woff') format('woff');
-font-size: 10px;
-letter-spacing: 3px;
-color: #3c3c3c;
-padding-top: 6px;
-display: block;
-text-decoration: none;
-}
-
-.txt-skeleton:hover{
-color: #EEEEEE;
-}
+            const map =
+                new google.maps.Map(
+                    mapElement,
+                    mapOptions
+                );
 
 
-.box-logo-footer{
-width: 296px;
-padding: 60px 0;
-}
-.img-logo-footer{
-width: 118px;
-}
-/**-------**/
-.box-skeleton{
-width: 296px;
-padding: 60px 0;
-}
-.logo-skeleton{
-width: 42px;
-}
-.txt-skeleton{
-font-size: 9px;
-letter-spacing: 3px;
-color: #3c3c3c;
-}
+            const markerIcon = {
 
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-@media (min-width:375px) and (max-width: 388px) 
-and (-webkit-min-device-pixel-ratio: 2) {
-.box-logo-footer{
-width: 342px;
-padding: 70px 0;
-}
-.img-logo-footer{
-width: 130px;
-}
-/**-------**/
-.box-skeleton{
-width: 342px;
-padding: 70px 0;
-}
-.logo-skeleton{
-width: 44px;
-}
-.txt-skeleton{
-font-size: 10px;
-letter-spacing: 3px;
-color: #3c3c3c;
-}
-}
+                url:
+                    "./static/img/ico/icon.svg",
 
-@media (min-width: 389px) and (max-width: 413px)  {
-.box-logo-footer{
-width: 359px;
-padding: 70px 0;
-}
-.img-logo-footer{
-width: 136px;
-}
-/**-------**/
-.box-skeleton{
-width: 359px;
-padding: 70px 0;
-}
-.logo-skeleton{
-width: 46px;
-}
-.txt-skeleton{
-font-size: 10px;
-letter-spacing: 3px;
-color: #3c3c3c;
-}
-}
+                scaledSize:
+                    new google.maps.Size(
+                        70,
+                        70
+                    )
 
-@media (min-width: 414px) and (max-width: 2000px)  {
-.box-logo-footer{
-width: 380px;
-padding: 80px 0;
-}
-.img-logo-footer{
-width: 144px;
-}
-/**-------**/
-.box-skeleton{
-    width: 380px;
-padding: 80px 0;
-}
-.logo-skeleton{
-width: 46px;
-}
-.txt-skeleton{
-font-size: 11px;
-letter-spacing: 3px;
-color: #3c3c3c;
-}
-}
-</style>
+            };
 
 
-<div class="box-logo-footer">
-<img class="img-logo-footer" src="./static/img/logo/hoteltorobayo-logo.svg">
-</div>
+            new google.maps.Marker({
+
+                position: position,
+
+                map: map,
+
+                icon: markerIcon,
+
+                title:
+                    "Hostel Torobayo"
+
+            });
+
+        }
 
 
-<div class="box-skeleton">
-<img class="logo-skeleton" src="./static/img/logo/skeleton-paul-pineda-logo.svg">
-<a author="paul-pineda" href="https://www.skeleton.cl" target="_blank" class="txt-skeleton">HECHO POR SKELETON</a>
-</div>
+        if (
+            typeof google !== "undefined" &&
+            google.maps
+        ) {
+
+            initMap();
+
+        }
+
+    </script>
 
 
 </body>
 
-
 </html>
+
